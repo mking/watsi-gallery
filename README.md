@@ -29,6 +29,7 @@ git push heroku master
 heroku login
 heroku create watsi-gallery
 git remote -v
+heroku logs
 ```
 
 TODO

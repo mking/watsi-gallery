@@ -2,7 +2,11 @@
   "name": "watsi-gallery",
   "version": "1.0.0",
   "private": true,
+  "engines": {
+    "node": "0.12.x"
+  },
   "scripts": {
+    "start": "node ./app.js",
     "download": "node ./scripts/download.js"
   },
   "dependencies": {

@@ -22,4 +22,5 @@ app.get('/', function (req, res) {
   });
 });
 
-app.listen(8888);
+var port = process.env.PORT ? parseInt(process.env.PORT, 10) : 8888;
+app.listen(port);
