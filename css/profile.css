@@ -1,2 +1,67 @@
 .profile {
+  background-color: #f4f7f8;
+  color: #89949b;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  margin-bottom: 22px;
+  margin-right: 22px;
+  width: 330px;
+}
+
+.profile:hover {
+  cursor: pointer;
+}
+
+.profile .profile-image {
+  flex-shrink: 0;
+}
+
+.profile .description {
+  flex-shrink: 0;
+  font-size: 16px;
+  height: 115px;
+  line-height: 24px;
+  padding: 12px 14px;
+}
+
+.profile .more {
+  color: #00B2D8;
+  text-decoration: none;
+}
+
+.profile:hover .more {
+  color: #005e72;
+}
+
+.profile .progress {
+  flex-shrink: 0;
+}
+
+.profile .progress-bar {
+}
+
+.profile .progress-bar .fill {
+  background-color: #ffc627;
+  height: 5px;
+}
+
+.profile .donations {
+  display: flex;
+  border-top: 1px solid #e6e6e6;
+}
+
+.profile .donation {
+  align-items: center;
+  display: flex;
+  flex-basis: 0;
+  flex-grow: 1;
+  flex-shrink: 0;
+  font-size: 12px;
+  height: 36px;
+  justify-content: center;
+}
+
+.profile .donated {
+  border-right: 1px solid #e6e6e6;
 }

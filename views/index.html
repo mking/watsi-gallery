@@ -1,24 +1,31 @@
 {% extends "layout.html" %}
 {% block content %}
-{% for profile in profiles %}
-<div class="profile">
-  <div>
-    <img src="/img/profiles/{{profile.profile_url_file}}">
-  </div>
-  <div class="about">
-    {{profile.description | truncate(150)}}
-  </div>
-  <div class="progress">
-    <div class="progress-bar">
-      {{profile.per_cent_funded}}
+<div class="profiles">
+  <h1>You're viewing all patients from all partners.</h1>
+  <div class="gallery">
+    {% for profile in profiles %}
+    <div class="profile">
+      <img class="profile-image" src="/img/profiles/{{profile.profile_url_file}}">
+      <div class="description">
+        {{profile.description | truncate(120)}}
+        <a class="more" href="#">Read More &raquo;</a>
+      </div>
+      <div class="progress">
+        <div class="progress-bar">
+          <div class="fill" style="width: {{profile.per_cent_funded}}">
+          </div>
+        </div>
+        <div class="donations">
+          <div class="donated donation">
+            {{profile.donated}} raised
+          </div>
+          <div class="target donation">
+            {{profile.target}} to go
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="donated">
-      {{profile.donated}} raised
-    </div>
-    <div class="target">
-      {{profile.target}} to go
-    </div>
+    {% endfor %}
   </div>
 </div>
-{% endfor %}
 {% endblock %}

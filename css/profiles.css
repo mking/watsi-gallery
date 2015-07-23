@@ -1,0 +1,17 @@
+.profiles {
+  margin: 0 auto;
+  padding-left: 22px;
+  width: 1078px;
+}
+
+.profiles h1 {
+  color: #4b5c66;
+  font-size: 36px;
+  font-weight: normal;
+  line-height: 54px;
+}
+
+.profiles .gallery {
+  display: flex;
+  flex-wrap: wrap;
+}

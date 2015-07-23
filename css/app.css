@@ -1,2 +1,12 @@
 @import './reset.css';
 @import './profile.css';
+@import './profiles.css';
+
+body {
+  margin: 0;
+}
+
+/* Default font */
+body, button, input, textarea {
+  font-family: 'Open Sans', sans-serif;
+}
