@@ -9,6 +9,10 @@ app.use('/json', express.static(path.join(__dirname, 'json')));
 app.use('/img', express.static(path.join(__dirname, 'img')));
 app.use('/css', express.static(path.join(__dirname, 'css')));
 
+app.use('/favicon.ico', function (req, res) {
+  res.sendFile(path.join(__dirname, 'favicon.ico'));
+});
+
 nunjucks.configure('views', {
   autoescape: true,
   express: app
