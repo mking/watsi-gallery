@@ -1,5 +1,5 @@
 Download Profiles
 ---
 ```
-node ./scripts/download.js
+npm run download
 ```
