@@ -1,4 +1,4 @@
-[Demo](#) / [Original](https://watsi.org/fund-treatments)
+[Demo](https://watsi-gallery.herokuapp.com) / [Original](https://watsi.org/fund-treatments)
 
 Setup
 ---
@@ -17,6 +17,18 @@ Download Profiles
 ---
 ```
 npm run download
+```
+
+Deployment
+---
+```
+git push heroku master
+# Visit https://watsi-gallery.herokuapp.com
+
+# Reference
+heroku login
+heroku create watsi-gallery
+git remote -v
 ```
 
 TODO
