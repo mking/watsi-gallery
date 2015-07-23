@@ -1,3 +1,4 @@
+
 [Demo](https://watsi-gallery.herokuapp.com) / [Original](https://watsi.org/fund-treatments)
 
 Setup
@@ -36,3 +37,4 @@ TODO
 ---
 - Profile detail
 - Load more
+- Load JSON into DB
