@@ -1,0 +1,16 @@
+{
+  "name": "link",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "download": "node ./scripts/download.js"
+  },
+  "dependencies": {
+    "bluebird": "^2.9.34",
+    "express": "^4.13.1",
+    "lodash": "^3.10.0",
+    "nunjucks": "^1.3.4",
+    "request": "^2.60.0",
+    "request-promise": "^0.4.2"
+  }
+}
