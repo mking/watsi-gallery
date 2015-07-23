@@ -1,4 +1,24 @@
 {% extends "layout.html" %}
 {% block content %}
-<h1>Watsi!!!</h1>
+{% for profile in profiles %}
+<div class="profile">
+  <div>
+    <img src="/img/profiles/{{profile.profile_url_file}}">
+  </div>
+  <div class="about">
+    {{profile.description | truncate(150)}}
+  </div>
+  <div class="progress">
+    <div class="progress-bar">
+      {{profile.per_cent_funded}}
+    </div>
+    <div class="donated">
+      {{profile.donated}} raised
+    </div>
+    <div class="target">
+      {{profile.target}} to go
+    </div>
+  </div>
+</div>
+{% endfor %}
 {% endblock %}
