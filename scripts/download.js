@@ -12,11 +12,21 @@ rp('https://watsi.org/fund-treatments.json').then(function (profilesString) {
     Promise.map(profiles.profiles, function (profile) {
       var profileURL = url.parse(profile.url);
       var profilePath = path.parse(profileURL.pathname);
-      return rp(profile.url + '.json')
-        .then(function (profileString) {
+      var imageURL = url.parse(profile.profile_url);
+      var imagePath = path.parse(imageURL.pathname);
+      return Promise.all([
+        rp(profile.url + '.json').then(function (profileString) {
           console.log('downloaded profile:', profilePath.base);
           return fs.writeFileAsync(path.join(__dirname, '../json/profiles/' + profilePath.base + '.json'), profileString);
-        });
+        }),
+        rp({
+          url: profile.profile_url,
+          encoding: null
+        }).then(function (image) {
+          console.log('downloaded image:', imagePath.base, Buffer.isBuffer(image));
+          return fs.writeFileAsync(path.join(__dirname, '../img/profiles/' + imagePath.base), image);
+        })
+      ]);
     }),
     fs.writeFileAsync(path.join(__dirname, '../json/profiles.json'), profilesString)
   ]);
